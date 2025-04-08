@@ -106,6 +106,7 @@
             android:textSize="30dp"
             android:textColor="@color/white"
             android:backgroundTint="#0000ff"
+
             />
         <Button
             android:id="@+id/bt1"

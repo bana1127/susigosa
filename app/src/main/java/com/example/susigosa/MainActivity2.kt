@@ -19,6 +19,21 @@ class MainActivity2 : AppCompatActivity(){
         binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         title = "계산기1"
+        fun opbtenabled(enabled: Boolean) {
+            binding.btplus.isEnabled = enabled
+            binding.btmiu.isEnabled = enabled
+            binding.btmul.isEnabled = enabled
+            binding.btdiv.isEnabled = enabled
+            binding.btplus.setTextColor(if(enabled)Color.WHITE else Color.GRAY)
+            binding.btmiu.setTextColor(if(enabled)Color.WHITE else Color.GRAY)
+            binding.btmul.setTextColor(if(enabled)Color.WHITE else Color.GRAY)
+            binding.btdiv.setTextColor(if(enabled)Color.WHITE else Color.GRAY)
+        }
+
+        fun eqbtEnabled(enabled: Boolean) {
+            binding.btequl.isEnabled = enabled
+            binding.btequl.setTextColor(if(enabled)Color.WHITE else Color.GRAY)
+        }
 
         fun colorchange(button: Button){
             button.setOnTouchListener { v, event ->
@@ -31,17 +46,23 @@ class MainActivity2 : AppCompatActivity(){
         }
 
         fun calnum(button: Button){
-            if(check == true){
+            if(check){
                 if(button.text.toString() == "0"){
                     return
                 }else{
-                first += button.text.toString()}
+                first += button.text.toString()
+                opbtenabled(true)
+                eqbtEnabled(false)
+                }
             }
             else{
                 if(button.text.toString() == "0"){
                     return
                 }else{
-                    second += button.text.toString()}
+                    second += button.text.toString()
+                    opbtenabled(false)
+                    eqbtEnabled(true)
+                }
             }
             binding.inputscreen.text = binding.inputscreen.text.toString() + button.text.toString()
         }
@@ -66,6 +87,8 @@ class MainActivity2 : AppCompatActivity(){
                 operator = button.text.toString()
                 binding.inputscreen.text =
                     binding.inputscreen.text.toString() + button.text.toString()
+                opbtenabled(false)
+                eqbtEnabled(false)
             }
         }
         binding.bt0.setOnClickListener {
@@ -129,6 +152,9 @@ class MainActivity2 : AppCompatActivity(){
         colorchange(binding.btdiv)
         colorchange(binding.btmul)
         colorchange(binding.btequl)
+
+        opbtenabled(false)
+        eqbtEnabled(false)
     }
 
 }

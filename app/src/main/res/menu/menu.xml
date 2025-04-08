@@ -5,7 +5,8 @@
         android:id="@+id/검색"
         android:title="검색"
         android:icon="@drawable/search"
-        app:showAsAction="ifRoom"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
         />
     <item
         android:id="@+id/cal1"
