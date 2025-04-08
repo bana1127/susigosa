@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Susigosa" parent="Theme.Material3.DayNight">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#B7B7E9</item>
+        <item name="colorPrimaryVariant">#B7B7E9</item>
+        <item name="colorOnPrimary">#000000</item>
+    </style>
+
+    <style name="Theme.Susigosa" parent="Base.Theme.Susigosa" />
+</resources>

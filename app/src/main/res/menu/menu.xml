@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/검색"
+        android:title="검색"
+        android:icon="@drawable/search"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/cal1"
+        android:title="계산기1"/>
+    <item
+        android:id="@+id/cal2"
+        android:title="계산기2"/>
+    <item
+        android:id="@+id/newa"
+        android:title="새로운 창"/>
+</menu>
