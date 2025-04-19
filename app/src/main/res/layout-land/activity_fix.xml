@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#b7b7e9"
+        android:id="@+id/toolbar"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:text="학과 :"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:layout_columnWeight="1"
+                android:id="@+id/majorf"
+                />
+            <TextView
+                android:text="학번 :"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:layout_columnWeight="1"
+                android:id="@+id/numf"
+                android:inputType="number"
+                />
+            <TextView
+                android:text="이름 :"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:layout_columnWeight="1"
+                android:id="@+id/namef"
+                android:layout_columnSpan="3"
+                />
+        </GridLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0000ff"
+            android:text="완료"
+            android:id="@+id/info_check"
+            />
+    </LinearLayout>
+
+</LinearLayout>
